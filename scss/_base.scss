@@ -17,8 +17,17 @@ html {
     font-size: 80%;
   }
 }
-// body {
-// }
+body {
+  font-family: "Ubuntu", sans-serif;
+}
+h1,
+h2,
+h3 {
+  font-family: "Overpass", sans-serif;
+}
+h1 {
+  font-weight: 500;
+}
 
 .container {
   width: 100%;
