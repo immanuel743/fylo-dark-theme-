@@ -1,0 +1,246 @@
+@import "variables";
+@import "components";
+
+// Navigation
+nav {
+  background-color: $dark-blue-1;
+  padding: 1em;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  // background-color: $dark-blue-1;
+  align-items: center;
+  height: 4rem;
+  &-img img {
+    height: 2rem;
+  }
+  &-link a {
+    text-decoration: none;
+    color: $white;
+    margin-left: 2rem;
+  }
+}
+
+header {
+  background-color: $dark-blue-1;
+}
+.header {
+  color: $white;
+  padding: 1rem;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding-bottom: 10rem;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  @media screen and (min-width: $medium-screen) {
+    background-image: url(../images/bg-curvy-desktop.svg);
+    // background-size: ;
+  }
+
+  &-img {
+    max-width: 40rem;
+  }
+  &__text-content {
+    text-align: center;
+    & h1 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+    & p {
+      color: $ash;
+      font-size: 1.5rem;
+      line-height: 1.4;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.main {
+  display: grid;
+  max-width: 120rem;
+  grid-template-columns: 1fr;
+  padding: 1rem;
+  margin: 0 auto;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  flex-direction: column;
+  // height: 50rem;
+  padding-top: 5rem;
+  padding-bottom: 10rem;
+  &-wrapper {
+    background-color: $dark-blue-2;
+  }
+  @media screen and (min-width: $large-screen) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+  }
+
+  &__item {
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 1.2rem;
+    color: $white;
+    @media screen and (min-width: $large-screen) {
+      min-height: 10rem;
+      padding: 1rem 3rem;
+    }
+    & img {
+      margin-bottom: 1rem;
+    }
+    & h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    & p {
+      font-size: 1.5rem;
+      line-height: 1.5;
+    }
+  }
+}
+
+// stay
+.stay {
+  flex-direction: column;
+
+  padding: 1rem;
+  padding-bottom: 10rem;
+  justify-items: center;
+  align-items: center;
+  @media screen and (min-width: $medium-screen) {
+    flex-direction: row;
+  }
+  &-wrap {
+    background-color: $dark-blue-2;
+  }
+  &__img-wrap {
+    max-width: 30rem;
+    @media screen and (min-width: $medium-screen) {
+      margin-right: 2rem;
+      max-width: 60rem;
+      margin-right: 1.2rem;
+    }
+  }
+  &__text-content {
+    margin: 3rem 0 0;
+    text-align: left;
+    color: $white;
+    max-width: 60rem;
+    margin-left: 2rem;
+    & h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    & p {
+      font-size: 1.5rem;
+      color: $ash;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+// testimonials
+.testimonials {
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  padding: 1rem;
+  padding-bottom: 15rem;
+  &-wrap {
+    background-color: $dark-blue-2;
+  }
+  @media screen and (min-width: $large-screen) {
+    flex-direction: row;
+  }
+}
+
+// early section
+.early {
+  max-width: 60rem;
+
+  padding: 1.5rem 1rem;
+  text-align: center;
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  color: $white;
+  position: relative;
+  transform: translate(-50%, -50%);
+  top: 10%;
+  left: 50%;
+  background-color: $dark-blue-1;
+  box-shadow: 5px 5px 5rem rgba(#000, 0.5);
+  &-wrap {
+    padding: 1rem;
+    height: 0;
+    position: relative;
+    // background-color: $dark-blue-3;
+    // position: absolute;
+
+    background-color: $dark-blue-3;
+  }
+  & h1 {
+    font-size: 1.8rem;
+  }
+  & p {
+    color: $ash;
+    line-height: 1.4;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  & button,
+  & input[type="text"] {
+    display: block;
+    width: 70%;
+    padding: 1.5rem;
+    border: 1px solid transparent;
+    border-radius: 2.2rem;
+    margin: 0 auto;
+  }
+
+  & input[type="text"] {
+    background-color: $white;
+
+    margin-bottom: 1.2rem;
+  }
+  & button {
+    background-color: $blue;
+    color: $white;
+  }
+}
+
+footer {
+  background-color: $dark-blue-3;
+  padding-top: 15rem;
+  color: $white;
+  & .footer {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    @media screen and (min-width: $large-screen) {
+      flex-direction: row;
+    }
+    & .item {
+      @media screen and (min-width: $large-screen) {
+        flex-basis: 20rem;
+        flex-grow: 1;
+      }
+    }
+    &__img {
+      width: 10rem;
+    }
+    &__links {
+      margin: 1rem 0;
+      & a {
+        color: $white;
+        display: block;
+        text-decoration: none;
+        font-size: 1.2rem;
+        margin: 1rem 0;
+      }
+    }
+  }
+}

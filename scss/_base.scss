@@ -1,0 +1,33 @@
+@import "variables";
+@import "components";
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+}
+html {
+  font-size: 62.5%;
+  @media screen and (min-width: $medium-screen) {
+    font-size: 80%;
+  }
+}
+// body {
+// }
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  width: 120rem;
+  max-width: 100%;
+  margin: 0 auto;
+}
